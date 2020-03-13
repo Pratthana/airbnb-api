@@ -51,14 +51,14 @@ app.get('/api/airbnb/listings/city/:cityname', async (req, res) => {
 
     console.log(req.params.cityname);
     const query = {"address.market": req.params.cityname};
-    const places = await Place.find(query);
+    const places = await Place.find(query).limit(20);
     console.log(places);
     res.json(places);
 
 })
 
 // Get all listing by rating
-app.get('/api/airbnb/rating/:min', async (req, res) => {
+app.get('/api/airbnb/listings/rating/:min', async (req, res) => {
 
     // Get data from MongoDB
     console.log(req.params.min);
