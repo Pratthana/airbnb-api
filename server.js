@@ -45,7 +45,7 @@ app.get('/api/airbnb/listings/:id', async (req, res) => {
 
 
 // Get all listing by city name
-app.get('/api/airbnb/city/:cityname', async (req, res) => {
+app.get('/api/airbnb/listings/city/:cityname', async (req, res) => {
 
     // Get data from MongoDB
 
